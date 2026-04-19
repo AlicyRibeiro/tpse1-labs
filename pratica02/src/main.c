@@ -1,3 +1,33 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  main.c
+ *
+ *    Description:  Primeiro programa bare metal para a BeagleBone Black.
+ *                  Responsável por habilitar o clock do GPIO1, configurar
+ *                  o pino GPIO1_21 como saída e realizar o pisca-pisca
+ *                  do LED USR0 através do controle direto dos registradores
+ *                  do AM335x.
+ *
+ *                  Funcionalidades implementadas:
+ *                  - Ativação do clock do GPIO1
+ *                  - Configuração do GPIO1_21 como saída
+ *                  - Controle dos registradores SETDATAOUT e CLEARDATAOUT
+ *                  - Delay por software
+ *
+ *        Version:  1.0
+ *        Created:  
+ *       Revision:  none
+ *       Compiler:  arm-none-eabi-gcc
+ *
+ *         Author:  Ana Alicy Ribeiro
+ *   Organization:  Universidade Federal do Ceará - Campus Quixadá
+ *      Discipline: Técnicas de Programação para Sistemas Embarcados I
+ *        Practice: Prática 02 - Primeiro código para piscar um LED
+ *
+ * =====================================================================================
+ */
+ 
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <stddef.h>
