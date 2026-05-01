@@ -14,6 +14,5 @@ tpse1-labs/
 ├── button-polling/         # (em desenvolvimento)
 ├── interrupt-control/      # (em desenvolvimento)
 ├── frequency-timing/       # (em desenvolvimento)
-└── bitwise-exercises/      # Exercícios de operações bitwise
 
 ```
