@@ -5,20 +5,15 @@ Este repositório reúne as práticas desenvolvidas na disciplina Técnicas de P
 
 ## Estrutura do Repositório
 
-Cada prática está organizada em diretórios separados, contendo os arquivos-fonte, binários gerados, scripts auxiliares e documentação utilizada durante o desenvolvimento.
-
-Exemplo de organização da Prática 02:
+Cada prática está organizada em diretórios independentes, contendo código-fonte, scripts e documentação.
 
 ```text
-pratica02/
-├── bin/                   # Binários gerados após a compilação
-├── inc/                   # Arquivos de cabeçalho (.h)
-├── src/                   # Arquivos-fonte em C e Assembly
-├── Makefile               # Automação da compilação do projeto
-├── memmap.ld              # Linker Script para posicionamento na memória
-├── pratica_02_led_21.pdf  # Documento de apoio da prática
-├── script.txt             # Comandos utilizados no U-Boot
-├── start.s                # Código de inicialização em Assembly ARM
-└── README.md              # Explicação detalhada da prática
+tpse1-labs/
+├── blink-led/              # Pisca o LED USR0 (GPIO1_21)
+├── multi-led-control/      # Controle sequencial de 4 LEDs internos + 1 externo
+├── button-polling/         # (em desenvolvimento)
+├── interrupt-control/      # (em desenvolvimento)
+├── frequency-timing/       # (em desenvolvimento)
+└── bitwise-exercises/      # Exercícios de operações bitwise
 
 ```
