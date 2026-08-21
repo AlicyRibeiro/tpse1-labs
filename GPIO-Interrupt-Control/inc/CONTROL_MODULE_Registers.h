@@ -1,0 +1,573 @@
+#ifndef _CONTROL_MODULE_REGISTERS_
+#define _CONTROL_MODULE_REGISTERS_
+
+#pragma region CONTROL MODULE REGISTERS
+
+// #pragma region PAG1
+#define control_revision                (0x0u) 
+#define control_hwinfo                  (0x4u) 
+#define control_sysconfig               (0x10u) 
+#define control_status                  (0x40u)
+#define control_emif_sdram_config       (0x110u)
+#define cortex_vbbldo_ctrl              (0x41Cu) 
+#define core_sldo_ctrl                  (0x428u) 
+#define mpu_sldo_ctrl                   (0x42Cu) 
+#define clk32kdivratio_ctrl             (0x444u) 
+#define bandgap_ctrl                    (0x448u) 
+#define bandgap_trim                    (0x44Cu) 
+#define pll_clkinpulow_ctrl             (0x458u) 
+// #pragma endregion PAG1
+
+// #pragma region PAG2
+#define mosc_ctrl                       (0x468u)
+#define rcosc_ctrl                      (0x46Cu) 
+#define deepsleep_ctrl                  (0x470u) 
+#define dpll_pwr_sw_status              (0x50Cu)
+#define device_id                       (0x600u) 
+#define dev_feature                     (0x604u) 
+#define init_priority_0                 (0x608u) 
+#define init_priority_1                 (0x60Cu) 
+#define mmu_cfg                         (0x610u) 
+#define tptc_cfg                        (0x614u) 
+#define usb_ctrl0                       (0x620u) 
+#define usb_sts0                        (0x624u) 
+#define usb_ctrl1                       (0x628u) 
+#define usb_sts1                        (0x62Cu) 
+#define mac_id0_lo                      (0x630u) 
+#define mac_id0_hi                      (0x634u) 
+#define mac_id1_lo                      (0x638u) 
+#define mac_id1_hi                      (0x63Cu) 
+#define dcan_raminit                    (0x644u) 
+#define usb_wkup_ctrl                   (0x648u) 
+#define gmii_sel                        (0x650u) 
+#define pwmss_ctrl                      (0x664u) 
+#define mreqprio_0                      (0x670u) 
+#define mreqprio_1                      (0x674u) 
+#define hw_event_sel_grp1               (0x690u) 
+#define hw_event_sel_grp2               (0x694u) 
+#define hw_event_sel_grp3               (0x698u) 
+#define hw_event_sel_grp4               (0x69Cu) 
+#define smrt_ctrl                       (0x6A0u) 
+#define mpuss_hw_debug_sel              (0x6A4u) 
+#define mpuss_hw_dbg_info               (0x6A8u) 
+#define vdd_mpu_opp_050                 (0x770u) 
+#define vdd_mpu_opp_100                 (0x774u) 
+#define vdd_mpu_opp_120                 (0x778u) 
+#define vdd_mpu_opp_turbo               (0x77Cu) 
+#define vdd_core_opp_050                (0x7B8u) 
+#define vdd_core_opp_100                (0x7BCu) 
+#define bb_scale                        (0x7D0u) 
+#define usb_vid_pid                     (0x7F4u)
+#define efuse_sma                       (0x7FCu) 
+#define conf_gpmc_ad0                   (0x800u)
+#define conf_gpmc_ad1                   (0x804u)
+#define conf_gpmc_ad2                   (0x808u) 
+#define conf_gpmc_ad3                   (0x80Cu) 
+#define conf_gpmc_ad4                   (0x810u) 
+#define conf_gpmc_ad5                   (0x814u) 
+#define conf_gpmc_ad6                   (0x818u) 
+// #pragma endregion PAG2
+
+// #pragma region PAG3
+#define conf_gpmc_ad7                   (0x81Cu)
+#define conf_gpmc_ad8                   (0x820u) 
+#define conf_gpmc_ad9                   (0x824u) 
+#define conf_gpmc_ad10                  (0x828u) 
+#define conf_gpmc_ad11                  (0x82Cu) 
+#define conf_gpmc_ad12                  (0x830u) 
+#define conf_gpmc_ad13                  (0x834u) 
+#define conf_gpmc_ad14                  (0x838u) 
+#define conf_gpmc_ad15                  (0x83Cu) 
+#define conf_gpmc_a0                    (0x840u) 
+#define conf_gpmc_a1                    (0x844u) 
+#define conf_gpmc_a2                    (0x848u) 
+#define conf_gpmc_a3                    (0x84Cu) 
+#define conf_gpmc_a4                    (0x850u) 
+#define conf_gpmc_a5                    (0x854u) 
+#define conf_gpmc_a6                    (0x858u) 
+#define conf_gpmc_a7                    (0x85Cu) 
+#define conf_gpmc_a8                    (0x860u) 
+#define conf_gpmc_a9                    (0x864u) 
+#define conf_gpmc_a10                   (0x868u) 
+#define conf_gpmc_a11                   (0x86Cu) 
+#define conf_gpmc_wait0                 (0x870u) 
+#define conf_gpmc_wpn                   (0x874u) 
+#define conf_gpmc_ben1                  (0x878u) 
+#define conf_gpmc_csn0                  (0x87Cu) 
+#define conf_gpmc_csn1                  (0x880u) 
+#define conf_gpmc_csn2                  (0x884u) 
+#define conf_gpmc_csn3                  (0x888u) 
+#define conf_gpmc_clk                   (0x88Cu) 
+#define conf_gpmc_advn_ale              (0x890u) 
+#define conf_gpmc_oen_ren               (0x894u) 
+#define conf_gpmc_wen                   (0x898u) 
+#define conf_gpmc_ben0_cle              (0x89Cu) 
+#define conf_lcd_data0                  (0x8A0u) 
+#define conf_lcd_data1                  (0x8A4u) 
+#define conf_lcd_data2                  (0x8A8u) 
+#define conf_lcd_data3                  (0x8ACu) 
+#define conf_lcd_data4                  (0x8B0u) 
+#define conf_lcd_data5                  (0x8B4u) 
+#define conf_lcd_data6                  (0x8B8u) 
+#define conf_lcd_data7                  (0x8BCu) 
+#define conf_lcd_data8                  (0x8C0u) 
+#define conf_lcd_data9                  (0x8C4u) 
+#define conf_lcd_data10                 (0x8C8u) 
+#define conf_lcd_data11                 (0x8CCu) 
+#define conf_lcd_data12                 (0x8D0u) 
+#define conf_lcd_data13                 (0x8D4u)
+// #pragma endregion PAG3
+
+// #pragma region PAG4
+#define conf_lcd_data14                 (0x8D8u)
+#define conf_lcd_data15                 (0x8DCu) 
+#define conf_lcd_vsync                  (0x8E0u) 
+#define conf_lcd_hsync                  (0x8E4u) 
+#define conf_lcd_pclk                   (0x8E8u) 
+#define conf_lcd_ac_bias_en             (0x8ECu) 
+#define conf_mmc0_dat3                  (0x8F0u) 
+#define conf_mmc0_dat2                  (0x8F4u) 
+#define conf_mmc0_dat1                  (0x8F8u) 
+#define conf_mmc0_dat0                  (0x8FCu) 
+#define conf_mmc0_clk                   (0x900u) 
+#define conf_mmc0_cmd                   (0x904u) 
+#define conf_mii1_col                   (0x908u) 
+#define conf_mii1_crs                   (0x90Cu) 
+#define conf_mii1_rx_er                 (0x910u) 
+#define conf_mii1_tx_en                 (0x914u) 
+#define conf_mii1_rx_dv                 (0x918u) 
+#define conf_mii1_txd3                  (0x91Cu) 
+#define conf_mii1_txd2                  (0x920u) 
+#define conf_mii1_txd1                  (0x924u) 
+#define conf_mii1_txd0                  (0x928u) 
+#define conf_mii1_tx_clk                (0x92Cu) 
+#define conf_mii1_rx_clk                (0x930u) 
+#define conf_mii1_rxd3                  (0x934u) 
+#define conf_mii1_rxd2                  (0x938u) 
+#define conf_mii1_rxd1                  (0x93Cu) 
+#define conf_mii1_rxd0                  (0x940u) 
+#define conf_rmii1_ref_clk              (0x944u)
+#define conf_mdio                       (0x948u) 
+#define conf_mdc                        (0x94Cu) 
+#define conf_spi0_sclk                  (0x950u) 
+#define conf_spi0_d0                    (0x954u) 
+#define conf_spi0_d1                    (0x958u) 
+#define conf_spi0_cs0                   (0x95Cu) 
+#define conf_spi0_cs1                   (0x960u) 
+#define conf_ecap0_in_pwm0_out          (0x964u) 
+#define conf_uart0_ctsn                 (0x968u) 
+#define conf_uart0_rtsn                 (0x96Cu) 
+#define conf_uart0_rxd                  (0x970u) 
+#define conf_uart0_txd                  (0x974u) 
+#define conf_uart1_ctsn                 (0x978u) 
+#define conf_uart1_rtsn                 (0x97Cu) 
+#define conf_uart1_rxd                  (0x980u) 
+#define conf_uart1_txd                  (0x984u) 
+#define conf_i2c0_sda                   (0x988u) 
+#define conf_i2c0_scl                   (0x98Cu) 
+#define conf_mcasp0_aclkx               (0x990u) 
+// #pragma endregion PAG4
+
+// #pragma region PAG5
+#define conf_mcasp0_fsx                 (0x994u)
+#define conf_mcasp0_axr0                (0x998u) 
+#define conf_mcasp0_ahclkr              (0x99Cu) 
+#define conf_mcasp0_aclkr               (0x9A0u) 
+#define conf_mcasp0_fsr                 (0x9A4u) 
+#define conf_mcasp0_axr1                (0x9A8u) 
+#define conf_mcasp0_ahclkx              (0x9ACu) 
+#define conf_xdma_event_intr0           (0x9B0u) 
+#define conf_xdma_event_intr1           (0x9B4u) 
+#define conf_warmrstn                   (0x9B8u) 
+#define conf_porz                       (0x9BCu) 
+#define conf_nnmi                       (0x9C0u) 
+#define conf_osc0_in                    (0x9C4u) 
+#define conf_osc0_out                   (0x9C8u) 
+#define conf_osc0_vss                   (0x9CCu) 
+#define conf_tms                        (0x9D0u) 
+#define conf_tdi                        (0x9D4u) 
+#define conf_tdo                        (0x9D8u) 
+#define conf_tck                        (0x9DCu) 
+#define conf_trstn                      (0x9E0u)
+#define conf_emu0                       (0x9E4u) 
+#define conf_emu1                       (0x9E8u) 
+#define conf_osc1_in                    (0x9ECu) 
+#define conf_osc1_out                   (0x9F0u) 
+#define conf_osc1_vss                   (0x9F4u) 
+#define conf_rtc_pwronrstn              (0x9F8u) 
+#define conf_pmic_power_en              (0x9FCu) 
+#define conf_ext_wakeup                 (0xA00u) 
+#define conf_enz_kaldo_1p8v             (0xA04u) 
+#define conf_usb0_dm                    (0xA08u) 
+#define conf_usb0_dp                    (0xA0Cu) 
+#define conf_usb0_ce                    (0xA10u) 
+#define conf_usb0_id                    (0xA14u) 
+#define conf_usb0_vbus                  (0xA18u) 
+#define conf_usb0_drvvbus               (0xA1Cu) 
+#define conf_usb1_dm                    (0xA20u) 
+#define conf_usb1_dp                    (0xA24u) 
+#define conf_usb1_ce                    (0xA28u) 
+#define conf_usb1_id                    (0xA2Cu) 
+#define conf_usb1_vbus                  (0xA30u) 
+#define conf_usb1_drvvbus               (0xA34u) 
+#define conf_ddr_resetn                 (0xA38u) 
+#define conf_ddr_csn0                   (0xA3Cu) 
+#define conf_ddr_cke                    (0xA40u) 
+#define conf_ddr_nck                    (0xA48u) 
+#define conf_ddr_casn                   (0xA4Cu) 
+#define conf_ddr_rasn                   (0xA50u) 
+// #pragma endregion PAG5
+
+// #pragma region PAG6
+#define conf_ddr_ba0                    (0xA58u) 
+#define conf_ddr_ba1                    (0xA5Cu) 
+#define conf_ddr_ba2                    (0xA60u) 
+#define conf_ddr_a0                     (0xA64u) 
+#define conf_ddr_a1                     (0xA68u) 
+#define conf_ddr_a2                     (0xA6Cu) 
+#define conf_ddr_a3                     (0xA70u) 
+#define conf_ddr_a4                     (0xA74u) 
+#define conf_ddr_a5                     (0xA78u) 
+#define conf_ddr_a6                     (0xA7Cu) 
+#define conf_ddr_a7                     (0xA80u) 
+#define conf_ddr_a8                     (0xA84u) 
+#define conf_ddr_a9                     (0xA88u) 
+#define conf_ddr_a10                    (0xA8Cu) 
+#define conf_ddr_a11                    (0xA90u) 
+#define conf_ddr_a12                    (0xA94u) 
+#define conf_ddr_a13                    (0xA98u) 
+#define conf_ddr_a14                    (0xA9Cu) 
+#define conf_ddr_a15                    (0xAA0u) 
+#define conf_ddr_odt                    (0xAA4u) 
+#define conf_ddr_d0                     (0xAA8u) 
+#define conf_ddr_d1                     (0xAACu) 
+#define conf_ddr_d2                     (0xAB0u) 
+#define conf_ddr_d3                     (0xAB4u) 
+#define conf_ddr_d4                     (0xAB8u) 
+#define conf_ddr_d5                     (0xABCu) 
+#define conf_ddr_d6                     (0xAC0u) 
+#define conf_ddr_d7                     (0xAC4u) 
+#define conf_ddr_d8                     (0xAC8u) 
+#define conf_ddr_d9                     (0xACCu) 
+#define conf_ddr_d10                    (0xAD0u) 
+#define conf_ddr_d11                    (0xAD4u) 
+#define conf_ddr_d12                    (0xAD8u) 
+#define conf_ddr_d13                    (0xADCu) 
+#define conf_ddr_d14                    (0xAE0u) 
+#define conf_ddr_d15                    (0xAE4u) 
+#define conf_ddr_dqm0                   (0xAE8u) 
+#define conf_ddr_dqm1                   (0xAECu) 
+#define conf_ddr_dqs0                   (0xAF0u) 
+#define conf_ddr_dqsn0                  (0xAF4u) 
+#define conf_ddr_dqs1                   (0xAF8u) 
+#define conf_ddr_dqsn1                  (0xAFCu) 
+#define conf_ddr_vref                   (0xB00u) 
+#define conf_ddr_vtp                    (0xB04u) 
+#define conf_ddr_strben0                (0xB08u) 
+#define conf_ddr_strben1                (0xB0Cu) 
+// #pragma endregion PAG6
+
+// #pragma region PAG7
+#define conf_ain6                       (0xB14u) 
+#define conf_ain5                       (0xB18u) 
+#define conf_ain4                       (0xB1Cu) 
+#define conf_ain3                       (0xB20u) 
+#define conf_ain2                       (0xB24u) 
+#define conf_ain1                       (0xB28u) 
+#define conf_ain0                       (0xB2Cu) 
+#define conf_vrefp                      (0xB30u) 
+#define conf_vrefn                      (0xB34u) 
+#define conf_avdd                       (0xB38u) 
+#define conf_avss                       (0xB3Cu) 
+#define conf_iforce                     (0xB40u) 
+#define conf_vsense                     (0xB44u) 
+#define conf_testout                    (0xB48u) 
+#define cqdetect_status                 (0xE00u) 
+#define ddr_io_ctrl                     (0xE04u) 
+#define vtp_ctrl                        (0xE0Cu) 
+#define vref_ctrl                       (0xE14u) 
+#define tpcc_evt_mux_0_3                (0xF90u) 
+#define tpcc_evt_mux_4_7                (0xF94u) 
+#define tpcc_evt_mux_8_11               (0xF98u) 
+#define tpcc_evt_mux_12_15              (0xF9Cu) 
+#define tpcc_evt_mux_16_19              (0xFA0u) 
+#define tpcc_evt_mux_20_23              (0xFA4u) 
+#define tpcc_evt_mux_24_27              (0xFA8u) 
+#define tpcc_evt_mux_28_31              (0xFACu) 
+#define tpcc_evt_mux_32_35              (0xFB0u) 
+#define tpcc_evt_mux_36_39              (0xFB4u) 
+#define tpcc_evt_mux_40_43              (0xFB8u) 
+#define tpcc_evt_mux_44_47              (0xFBCu) 
+#define tpcc_evt_mux_48_51              (0xFC0u) 
+#define tpcc_evt_mux_52_55              (0xFC4u) 
+#define tpcc_evt_mux_56_59              (0xFC8u) 
+#define tpcc_evt_mux_60_63              (0xFCCu) 
+#define timer_evt_capt                  (0xFD0u) 
+#define ecap_evt_capt                   (0xFD4u) 
+#define adc_evt_capt                    (0xFD8u) 
+#define reset_iso                       (0x1000u) 
+#define dpll_pwr_sw_ctrl                (0x1318u)
+#define ddr_cke_ctrl                    (0x131Cu) 
+#define sma2                            (0x1320u) 
+#define m3_txev_eoi                     (0x1324u)
+#define ipc_msg_reg0                    (0x1328u) 
+#define ipc_msg_reg1                    (0x132Cu) 
+#define ipc_msg_reg2                    (0x1330u) 
+#define ipc_msg_reg3                    (0x1334u) 
+#define ipc_msg_reg4                    (0x1338u) 
+// #pragma endregion PAG7
+
+// #pragma region PAG8
+#define ipc_msg_reg5                    (0x133Cu)
+#define ipc_msg_reg6                    (0x1340u) 
+#define ipc_msg_reg7                    (0x1344u) 
+#define ddr_cmd0_ioctrl                 (0x1404u) 
+#define ddr_cmd1_ioctrl                 (0x1408u) 
+#define ddr_cmd2_ioctrl                 (0x140Cu) 
+#define ddr_data0_ioctrl                (0x1440u) 
+#define ddr_data1_ioctrl                (0x1444u) 
+// #pragma endregion PAG 8
+
+#pragma endregion CONTROL MODULE REGISTERS
+
+/**
+ * @brief Control Module register & their coresponding offsets: TRM 9.3
+ **/
+typedef enum verify_control_module_registers{
+    CM_control_revision           = control_revision,
+    CM_control_hwinfo             = control_hwinfo,
+    CM_control_sysconfig          = control_sysconfig,
+    CM_control_status             = control_status,
+    CM_control_emif_sdram_config  = control_emif_sdram_config,
+    CM_cortex_vbbldo_ctrl         = cortex_vbbldo_ctrl,
+    CM_core_sldo_ctrl             = core_sldo_ctrl,
+    CM_mpu_sldo_ctrl              = mpu_sldo_ctrl,
+    CM_clk32kdivratio_ctrl        = clk32kdivratio_ctrl,
+    CM_bandgap_ctrl               = bandgap_ctrl,
+    CM_bandgap_trim               = bandgap_trim,
+    CM_pll_clkinpulow_ctrl        = pll_clkinpulow_ctrl,
+    CM_mosc_ctrl                  = mosc_ctrl,
+    CM_deepsleep_ctrl             = deepsleep_ctrl,
+    CM_dpll_pwr_sw_status         = dpll_pwr_sw_status,
+    CM_device_id                  = device_id,
+    CM_dev_feature                = dev_feature,
+    CM_init_priority_0            = init_priority_0,
+    CM_init_priority_1            = init_priority_1,
+    CM_mmu_cfg                    = mmu_cfg,
+    CM_tptc_cfg                   = tptc_cfg,
+    CM_usb_ctrl0                  = usb_ctrl0,
+    CM_usb_sts0                   = usb_sts0,
+    CM_usb_ctrl1                  = usb_ctrl1,
+    CM_usb_sts1                   = usb_sts1,
+    CM_mac_id0_lo                 = mac_id0_lo,
+    CM_mac_id0_hi                 = mac_id0_hi,
+    CM_mac_id1_lo                 = mac_id1_lo,
+    CM_mac_id1_hi                 = mac_id1_hi,
+    CM_dcan_raminit               = dcan_raminit,
+    CM_usb_wkup_ctrl              = usb_wkup_ctrl,
+    CM_gmii_sel                   = gmii_sel,
+    CM_pwmss_ctrl                 = pwmss_ctrl,
+    CM_mreqprio_0                 = mreqprio_0,
+    CM_mreqprio_1                 = mreqprio_1,
+    CM_hw_event_sel_grp1          = hw_event_sel_grp1,
+    CM_hw_event_sel_grp2          = hw_event_sel_grp2,
+    CM_hw_event_sel_grp3          = hw_event_sel_grp3,
+    CM_hw_event_sel_grp4          = hw_event_sel_grp4,
+    CM_smrt_ctrl                  = smrt_ctrl,
+    CM_mpuss_hw_debug_sel         = mpuss_hw_debug_sel,
+    CM_mpuss_hw_dbg_info          = mpuss_hw_dbg_info,
+    CM_vdd_mpu_opp_050            = vdd_mpu_opp_050,
+    CM_vdd_mpu_opp_100            = vdd_mpu_opp_100,
+    CM_vdd_mpu_opp_120            = vdd_mpu_opp_120,
+    CM_vdd_mpu_opp_turbo          = vdd_mpu_opp_turbo,
+    CM_vdd_core_opp_050           = vdd_core_opp_050,
+    CM_vdd_core_opp_100           = vdd_core_opp_100,
+    CM_bb_scale                   = bb_scale,
+    CM_usb_vid_pid                = usb_vid_pid,
+    CM_efuse_sma                  = efuse_sma,
+    CM_conf_gpmc_ad0              = conf_gpmc_ad0,
+    CM_conf_gpmc_ad1              = conf_gpmc_ad1,
+    CM_conf_gpmc_ad2              = conf_gpmc_ad2,
+    CM_conf_gpmc_ad3              = conf_gpmc_ad3,
+    CM_conf_gpmc_ad4              = conf_gpmc_ad4,
+    CM_conf_gpmc_ad5              = conf_gpmc_ad5,
+    CM_conf_gpmc_ad6              = conf_gpmc_ad6,
+    CM_conf_gpmc_ad7              = conf_gpmc_ad7,
+    CM_conf_gpmc_ad8              = conf_gpmc_ad8,
+    CM_conf_gpmc_ad9              = conf_gpmc_ad9,
+    CM_conf_gpmc_ad10             = conf_gpmc_ad10,
+    CM_conf_gpmc_ad11             = conf_gpmc_ad11,
+    CM_conf_gpmc_ad12             = conf_gpmc_ad12,
+    CM_conf_gpmc_ad13             = conf_gpmc_ad13,
+    CM_conf_gpmc_ad14             = conf_gpmc_ad14,
+    CM_conf_gpmc_ad15             = conf_gpmc_ad15,
+    CM_conf_gpmc_a0               = conf_gpmc_a0,
+    CM_conf_gpmc_a1               = conf_gpmc_a1,
+    CM_conf_gpmc_a2               = conf_gpmc_a2,
+    CM_conf_gpmc_a3               = conf_gpmc_a3,
+    CM_conf_gpmc_a4               = conf_gpmc_a4,
+    CM_conf_gpmc_a5               = conf_gpmc_a5,
+    CM_conf_gpmc_a6               = conf_gpmc_a6,
+    CM_conf_gpmc_a7               = conf_gpmc_a7,
+    CM_conf_gpmc_a8               = conf_gpmc_a8,
+    CM_conf_gpmc_a9               = conf_gpmc_a9,
+    CM_conf_gpmc_a10              = conf_gpmc_a10,
+    CM_conf_gpmc_a11              = conf_gpmc_a11,
+    CM_conf_gpmc_wait0            = conf_gpmc_wait0,
+    CM_conf_gpmc_wpn              = conf_gpmc_wpn,
+    CM_conf_gpmc_ben1             = conf_gpmc_ben1,
+    CM_conf_gpmc_csn0             = conf_gpmc_csn0,
+    CM_conf_gpmc_csn1             = conf_gpmc_csn1,
+    CM_conf_gpmc_csn2             = conf_gpmc_csn2,
+    CM_conf_gpmc_csn3             = conf_gpmc_csn3,
+    CM_conf_gpmc_clk              = conf_gpmc_clk,
+    CM_conf_gpmc_advn_ale         = conf_gpmc_advn_ale,
+    CM_conf_gpmc_oen_ren          = conf_gpmc_oen_ren,
+    CM_conf_gpmc_wen              = conf_gpmc_wen,
+    CM_conf_gpmc_ben0_cle         = conf_gpmc_ben0_cle,
+    CM_conf_lcd_data0             = conf_lcd_data0,
+    CM_conf_lcd_data1             = conf_lcd_data1,
+    CM_conf_lcd_data2             = conf_lcd_data2,
+    CM_conf_lcd_data3             = conf_lcd_data3,
+    CM_conf_lcd_data4             = conf_lcd_data4,
+    CM_conf_lcd_data5             = conf_lcd_data5,
+    CM_conf_lcd_data6             = conf_lcd_data6,
+    CM_conf_lcd_data7             = conf_lcd_data7,
+    CM_conf_lcd_data8             = conf_lcd_data8,
+    CM_conf_lcd_data9             = conf_lcd_data9,
+    CM_conf_lcd_data10            = conf_lcd_data10,
+    CM_conf_lcd_data11            = conf_lcd_data11,
+    CM_conf_lcd_data12            = conf_lcd_data12,
+    CM_conf_lcd_data13            = conf_lcd_data13,
+    CM_conf_lcd_data14            = conf_lcd_data14,
+    CM_conf_lcd_data15            = conf_lcd_data15,
+    CM_conf_lcd_vsync             = conf_lcd_vsync,
+    CM_conf_lcd_hsync             = conf_lcd_hsync,
+    CM_conf_lcd_pclk              = conf_lcd_pclk,
+    CM_conf_lcd_ac_bias_en        = conf_lcd_ac_bias_en,
+    CM_conf_mmc0_dat3             = conf_mmc0_dat3,
+    CM_conf_mmc0_dat2             = conf_mmc0_dat2,
+    CM_conf_mmc0_dat1             = conf_mmc0_dat1,
+    CM_conf_mmc0_dat0             = conf_mmc0_dat0,
+    CM_conf_mmc0_clk              = conf_mmc0_clk,
+    CM_conf_mmc0_cmd              = conf_mmc0_cmd,
+    CM_conf_mii1_col              = conf_mii1_col,
+    CM_conf_mii1_crs              = conf_mii1_crs,
+    CM_conf_mii1_rx_er            = conf_mii1_rx_er,
+    CM_conf_mii1_tx_en            = conf_mii1_tx_en,
+    CM_conf_mii1_rx_dv            = conf_mii1_rx_dv,
+    CM_conf_mii1_txd3             = conf_mii1_txd3,
+    CM_conf_mii1_txd2             = conf_mii1_txd2,
+    CM_conf_mii1_txd1             = conf_mii1_txd1,
+    CM_conf_mii1_txd0             = conf_mii1_txd0,
+    CM_conf_mii1_tx_clk           = conf_mii1_tx_clk,
+    CM_conf_mii1_rx_clk           = conf_mii1_rx_clk,
+    CM_conf_mii1_rxd3             = conf_mii1_rxd3,
+    CM_conf_mii1_rxd2             = conf_mii1_rxd2,
+    CM_conf_mii1_rxd1             = conf_mii1_rxd1,
+    CM_conf_mii1_rxd0             = conf_mii1_rxd0,
+    CM_conf_rmii1_ref_clk         = conf_rmii1_ref_clk,
+    CM_conf_mdio                  = conf_mdio,
+    CM_conf_mdc                   = conf_mdc,
+    CM_conf_spi0_sclk             = conf_spi0_sclk,
+    CM_conf_spi0_d0               = conf_spi0_d0,
+    CM_conf_spi0_d1               = conf_spi0_d1,
+    CM_conf_spi0_cs0              = conf_spi0_cs0,
+    CM_conf_spi0_cs1              = conf_spi0_cs1,
+    CM_conf_ecap0_in_pwm0_out     = conf_ecap0_in_pwm0_out,
+    CM_conf_uart0_ctsn            = conf_uart0_ctsn,
+    CM_conf_uart0_rtsn            = conf_uart0_rtsn,
+    CM_conf_uart0_rxd             = conf_uart0_rxd,
+    CM_conf_uart0_txd             = conf_uart0_txd,
+    CM_conf_uart1_ctsn            = conf_uart1_ctsn,
+    CM_conf_uart1_rtsn            = conf_uart1_rtsn,
+    CM_conf_uart1_rxd             = conf_uart1_rxd,
+    CM_conf_uart1_txd             = conf_uart1_txd,
+    CM_conf_i2c0_sda              = conf_i2c0_sda,
+    CM_conf_i2c0_scl              = conf_i2c0_scl,
+    CM_conf_mcasp0_aclkx          = conf_mcasp0_aclkx,
+    CM_conf_mcasp0_fsx            = conf_mcasp0_fsx,
+    CM_conf_mcasp0_axr0           = conf_mcasp0_axr0,
+    CM_conf_mcasp0_ahclkr         = conf_mcasp0_ahclkr,
+    CM_conf_mcasp0_aclkr          = conf_mcasp0_aclkr,
+    CM_conf_mcasp0_fsr            = conf_mcasp0_fsr,
+    CM_conf_mcasp0_axr1           = conf_mcasp0_axr1,
+    CM_conf_mcasp0_ahclkx         = conf_mcasp0_ahclkx,
+    CM_conf_xdma_event_intr0      = conf_xdma_event_intr0,
+    CM_conf_xdma_event_intr1      = conf_xdma_event_intr1,
+    CM_conf_warmrstn              = conf_warmrstn,
+    CM_conf_nnmi                  = conf_nnmi,
+    CM_conf_tms                   = conf_tms,
+    CM_conf_tdi                   = conf_tdi,
+    CM_conf_tdo                   = conf_tdo,
+    CM_conf_tck                   = conf_tck,
+    CM_conf_trstn                 = conf_trstn,
+    CM_conf_emu0                  = conf_emu0,
+    CM_conf_emu1                  = conf_emu1,
+    CM_conf_rtc_pwronrstn         = conf_rtc_pwronrstn,
+    CM_conf_pmic_power_en         = conf_pmic_power_en,
+    CM_conf_ext_wakeup            = conf_ext_wakeup,
+    //    removido CM_conf_rtc_kaldo_enn         = conf_rtc_kaldo_enn,
+    CM_conf_usb0_drvvbus          = conf_usb0_drvvbus,
+    CM_conf_usb1_drvvbus          = conf_usb1_drvvbus,
+    CM_cqdetect_status            = cqdetect_status,
+    CM_ddr_io_ctrl                = ddr_io_ctrl,
+    CM_vtp_ctrl                   = vtp_ctrl,
+    CM_vref_ctrl                  = vref_ctrl,
+    CM_tpcc_evt_mux_0_3           = tpcc_evt_mux_0_3,
+    CM_tpcc_evt_mux_4_7           = tpcc_evt_mux_4_7,
+    CM_tpcc_evt_mux_8_11          = tpcc_evt_mux_8_11,
+    CM_tpcc_evt_mux_12_15         = tpcc_evt_mux_12_15,
+    CM_tpcc_evt_mux_16_19         = tpcc_evt_mux_16_19,
+    CM_tpcc_evt_mux_20_23         = tpcc_evt_mux_20_23,
+    CM_tpcc_evt_mux_24_27         = tpcc_evt_mux_24_27,
+    CM_tpcc_evt_mux_28_31         = tpcc_evt_mux_28_31,
+    CM_tpcc_evt_mux_32_35         = tpcc_evt_mux_32_35,
+    CM_tpcc_evt_mux_36_39         = tpcc_evt_mux_36_39,
+    CM_tpcc_evt_mux_40_43         = tpcc_evt_mux_40_43,
+    CM_tpcc_evt_mux_44_47         = tpcc_evt_mux_44_47,
+    CM_tpcc_evt_mux_48_51         = tpcc_evt_mux_48_51,
+    CM_tpcc_evt_mux_52_55         = tpcc_evt_mux_52_55,
+    CM_tpcc_evt_mux_56_59         = tpcc_evt_mux_56_59,
+    CM_tpcc_evt_mux_60_63         = tpcc_evt_mux_60_63,
+    CM_timer_evt_capt             = timer_evt_capt,
+    CM_ecap_evt_capt              = ecap_evt_capt,
+    CM_adc_evt_capt               = adc_evt_capt,
+    CM_reset_iso                  = reset_iso,
+    CM_dpll_pwr_sw_ctrl           = dpll_pwr_sw_ctrl,
+    CM_ddr_cke_ctrl               = ddr_cke_ctrl,
+    CM_sma2                       = sma2,
+    CM_m3_txev_eoi                = m3_txev_eoi,
+    CM_ipc_msg_reg0               = ipc_msg_reg0,
+    CM_ipc_msg_reg1               = ipc_msg_reg1,
+    CM_ipc_msg_reg2               = ipc_msg_reg2,
+    CM_ipc_msg_reg3               = ipc_msg_reg3,
+    CM_ipc_msg_reg4               = ipc_msg_reg4,
+    CM_ipc_msg_reg5               = ipc_msg_reg5,
+    CM_ipc_msg_reg6               = ipc_msg_reg6,
+    CM_ipc_msg_reg7               = ipc_msg_reg7,
+    CM_ddr_cmd0_ioctrl            = ddr_cmd0_ioctrl,
+    CM_ddr_cmd1_ioctrl            = ddr_cmd1_ioctrl,
+    CM_ddr_cmd2_ioctrl            = ddr_cmd2_ioctrl,
+    CM_ddr_data0_ioctrl           = ddr_data0_ioctrl,
+    CM_ddr_data1_ioctrl           = ddr_data1_ioctrl
+}CONTROL_MODULE;
+
+/**
+ * @fn void CM_setCtrlModule(CONTROL_MODULE offset, uint32_t value)
+ * @brief               Set the control module to a certain value.
+ * @param[in]  offset   Module to set value.
+ * @param[in]  value    Value to set module to.
+ * @return              void
+ **/
+void controlModuleSetPad(CONTROL_MODULE offset, unsigned int value);
+
+/**
+ * @fn uint32_t CM_getCtrlModule(CONTROL_MODULE offset)
+ * @brief               Get the control module value.
+ * @param[in]  offset   Module to get the value from.
+ * @return              Value of the control module.
+ **/
+unsigned int controlModuleGetPad(CONTROL_MODULE offset);
+
+#endif

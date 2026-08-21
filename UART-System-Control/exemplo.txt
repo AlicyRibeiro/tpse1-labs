@@ -1,0 +1,31 @@
+/* UART0 */
+#define UART0_BASE 				(*((volatile unsigned int *)(0x44E09000)))
+#define UART0_RHR  				(*((volatile unsigned int *)(0x44E09000)))
+#define UART0_THR  				(*((volatile unsigned int *)(0x44E09000)))
+#define UART0_LSR  				(*((volatile unsigned int *)(0x44E09014)))
+
+void putCh(char c){
+	while(!(UART0_LSR & (1<<5)));
+	UART0_THR = c;
+}
+
+char getCh(){
+	while(!(UART0_LSR & (1<<0)));
+	return UART0_RHR;
+}
+
+int putString(char *str, unsigned int length){
+	for(int i = 0; i < length; i++){
+    	     putCh(str[i]);
+	}
+	return length;
+}
+
+int getString(char *buf, unsigned int length){
+	for(int i = 0; i < length; i ++){
+    		buf[i] = getCh();
+   	}
+	return length;
+}
+
+
